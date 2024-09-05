@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "ViewSlip";
+}
+@model Payslip;
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tdays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remain)
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelModel => Model.Userid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelModel => Model.Tdays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelModel => Model.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelModel => Model.Remain)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+
+</table>
+    <input type="submit" value="Download" class="btn btn-secondary">

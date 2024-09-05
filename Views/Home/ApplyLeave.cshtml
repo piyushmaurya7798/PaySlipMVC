@@ -1,0 +1,50 @@
+﻿@model Leave;
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<form method="post">
+
+<select asp-for="Sitem">
+    <option>pl</option>
+    <option>cl</option>
+    <option>sl</option>
+</select>
+
+    <br/>
+<div>
+   From : <input asp-for="Fromdate" type="datetime-local" />
+    <br/>
+    <br/>
+   To : <input asp-for="Todate" type="datetime-local" /> 
+    </div>
+
+
+    <br/>
+
+<div>
+   Reason : <input asp-for="Reason" type="text" />
+    </div>
+
+
+
+    <br/>
+    <input type="submit" class="btn btn-success" />
+
+    <br/>
+    <br/>
+
+    Balanced Leaves 
+
+
+    <br/>
+
+    pl : @Model.Pl
+    <br/>
+
+    cl : @Model.Cl
+    <br/>
+
+    sl : @Model.Sl
+</form>

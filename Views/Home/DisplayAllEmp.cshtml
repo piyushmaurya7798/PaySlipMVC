@@ -1,0 +1,71 @@
+﻿@model IEnumerable<PaySlipMVC.Models.Employee>
+
+@{
+    ViewData["Title"] = "DisplayAllEmp";
+}
+
+<h1>DisplayAllEmp</h1>
+
+<p>
+    <a asp-action="Joining" class="btn btn-success">ADD NEW EMPLOYEE</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfJoining)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfJoining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+           @*  <td>
+                <a asp-action="Edit" asp-route-id="@item.EmployeeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmployeeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmployeeId">Delete</a>
+            </td> *@
+        </tr>
+}
+    </tbody>
+</table>
